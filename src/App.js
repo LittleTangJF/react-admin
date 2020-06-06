@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import "./App.css";
 import Home from "./views/Home"; // 引入home
 import About from "./views/About"; // 引入home
 
@@ -9,7 +8,7 @@ class App extends React.Component {
     super(props);
     this.state = {};
   }
-  reader() {
+  render() {
     return (
       <BrowserRouter>
         <Switch>
