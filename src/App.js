@@ -1,20 +1,21 @@
-import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Login from "./views/login/Index.js"; // 引入home
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+// 引用组件
+import Login from './views/login/Index';
 
 class App extends React.Component {
-  constructor(props) {
+  constructor(props){
     super(props);
     this.state = {};
   }
-  render() {
+  render(){
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Login} />
+          <Route exact component={Login} path="/" />
         </Switch>
       </BrowserRouter>
-    );
+    )
   }
 }
 

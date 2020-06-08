@@ -1,39 +1,40 @@
-import React from 'react'
-import './index.scss'
-
-import LoginForm from './loginForm.jsx'
-import RegisterForm from './registerForm.jsx'
-
-class Login extends React.Component{
+import React, { Component } from "react";
+// css
+import "./index.scss";
+// 组件
+import LoginForm from "./loginForm";
+import RetisterForm from "./registerForm";
+class Login extends Component{
     constructor(){
-        super()
-        this.state ={
-            formType:'login'
-        }
+        super();
+        this.state = {
+            formType: "login"
+        };
+        
+    console.log('process.env.REACT_APP_API')
+    console.log(process.env.REACT_APP_API)
     }
-    onFinish = values => {
-        console.log('Received values of form: ', values);
-      };
 
-      switchForm =(value)=>{
-         this.setState({
-            formType:value
-         })
-      }
+
+    switchForm = (value) => {
+        this.setState({
+            formType: value
+        })
+    }
 
     render(){
         return (
-            <div className='formWrap'>
+            <div className="form-wrap">
                 <div>
                     {
-                        this.state.formType === 'login'? <LoginForm switchForm ={this.switchForm}> </LoginForm>: <RegisterForm switchForm ={this.switchForm}></RegisterForm >
+                    this.state.formType === 'login' 
+                    ? <LoginForm switchForm={this.switchForm}></LoginForm> 
+                    : <RetisterForm switchForm={this.switchForm}></RetisterForm>
                     }
                 </div>
-              
             </div>
         )
     }
 }
 
-
-export default Login
+export default Login;

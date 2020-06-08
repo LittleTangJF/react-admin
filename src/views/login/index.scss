@@ -1,32 +1,25 @@
-body{
-    background-color: skyblue;
-}
-.formWrap{
+.form-wrap {
     display: flex;
-    width: 350px;
+    width: 300px;
     height: 100vh;
     margin: auto;
     align-items: center;
-    >div{
-        width: 100%;
-    }
+    > div { width: 100%; }
 }
-.formHeader{
+.form-header {
     height: 56px;
     line-height: 56px;
     color: #fff;
-    .column{
+    .column {
+        margin-bottom: 0 !important;
         float: left;
         font-size: 16px;
         color: #fff;
-        margin-bottom: 0 !important;
     }
-    span{
+    span {
         float: right;
         font-size: 12px;
         opacity: .3;
     }
-}
-.fromContentt{
-   
+        
 }
