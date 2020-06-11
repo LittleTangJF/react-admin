@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 // 引用组件
 import Login from './views/login/Index';
+import todoList from './views/todoList/index'
 
 class App extends React.Component {
   constructor(props){
@@ -12,7 +13,8 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact component={Login} path="/" />
+        <Route exact component={todoList} path="/" />
+          <Route exact component={Login} path="/Login" />
         </Switch>
       </BrowserRouter>
     )
